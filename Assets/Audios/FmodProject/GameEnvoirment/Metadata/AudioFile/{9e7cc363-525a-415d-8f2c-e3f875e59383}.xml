@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9e7cc363-525a-415d-8f2c-e3f875e59383}">
+		<property name="assetPath">
+			<value>SFX/Footsteps 1.0/Concrete/Normal/concrete normal_walking 2_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.42950113378684807</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{de08651a-b78c-4400-8555-e28e9d9d223c}</destination>
+		</relationship>
+	</object>
+</objects>
