@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8238564589118820840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep
+  Guid:
+    Data1: -2120635603
+    Data2: 1274533651
+    Data3: -1898288748
+    Data4: 1731662899
+  Banks:
+  - {fileID: 2133497842537186358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &-2061296973123226268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: Assets/Audios/FmodProject/GameEnvoirment/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638040740629275816
+  lastModified: 638040895988311350
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 810
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,13 +62,15 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -2061296973123226268}
   - {fileID: 2133497842537186358}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 8465446880597884036}
+  - {fileID: -8238564589118820840}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2133497842537186358}
   StringsBanks:
   - {fileID: -2061296973123226268}
-  cacheTime: 638040740629275816
+  cacheTime: 638040895988311350
   cacheVersion: 131593
 --- !u!114 &2133497842537186358
 MonoBehaviour:
@@ -58,8 +87,35 @@ MonoBehaviour:
   Path: Assets/Audios/FmodProject/GameEnvoirment/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638040740629235923
+  lastModified: 638040895988251503
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2384448
   Exists: 1
+--- !u!114 &8465446880597884036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Envoirment
+  m_EditorClassIdentifier: 
+  Path: event:/Envoirment
+  Guid:
+    Data1: -1980552693
+    Data2: 1303599099
+    Data3: 767977913
+    Data4: 996245288
+  Banks:
+  - {fileID: 2133497842537186358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 112019
