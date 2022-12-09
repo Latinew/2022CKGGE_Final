@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "45d69641-be22-4cdb-b3ba-7c6f935d1706",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -218,6 +227,28 @@
                     "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b07dac9-a319-4e3c-a04a-ddfb59d615cb",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5dd3f39e-f818-4415-a535-54bd9037a2e1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
@@ -259,16 +290,6 @@
                     "isOR": false
                 }
             ]
-        },
-        {
-            "name": "Xbox Controller",
-            "bindingGroup": "Xbox Controller",
-            "devices": []
-        },
-        {
-            "name": "PS4 Controller",
-            "bindingGroup": "PS4 Controller",
-            "devices": []
         }
     ]
 }

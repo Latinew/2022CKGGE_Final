@@ -91,6 +91,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Attack();
 		}
 
 		private void LateUpdate()
@@ -174,6 +175,15 @@ namespace StarterAssets
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
 
+		private void Attack()
+		{
+			if (_input.Attack)
+			{
+				Debug.Log("던짐");
+				_input.Attack = false;
+			}
+		}
+		
 		private void JumpAndGravity()
 		{
 			if (Grounded)

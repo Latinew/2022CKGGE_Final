@@ -9,6 +9,7 @@ namespace StarterAssets
         public Vector2 Move;
         public Vector2 Look;
         public bool Jump;
+        public bool Attack;
         public bool Sprint;
 
         [Header("Movement Settings")]
@@ -38,6 +39,10 @@ namespace StarterAssets
             Sprint = value.ReadValueAsButton();
         }
 
+        public void OnAttackInput(InputAction.CallbackContext value)
+        {
+            Attack = value.ReadValueAsButton();
+        }
         
         private void OnApplicationFocus(bool hasFocus)
         {
