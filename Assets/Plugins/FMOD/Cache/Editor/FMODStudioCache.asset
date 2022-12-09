@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -1898288748
     Data4: 1731662899
   Banks:
-  - {fileID: 2133497842537186358}
+  - {fileID: -7563327205917567862}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -27,7 +27,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &-2061296973123226268
+--- !u!114 &-7563327205917567862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audios/FMODBuild/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638062361015788869
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2636712282086354678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,13 +57,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Audios/FmodProject/GameEnvoirment/Build/Desktop/Master.strings.bank
+  Path: Assets/Audios/FMODBuild/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638061394220564583
+  lastModified: 638062361015687638
   FileSizes:
-  - Name: Desktop
-    Value: 810
+  - Name: 
+    Value: 878
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -60,38 +78,18 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2061296973123226268}
-  - {fileID: 2133497842537186358}
+  - {fileID: -2636712282086354678}
+  - {fileID: -7563327205917567862}
   EditorEvents:
   - {fileID: 8465446880597884036}
   - {fileID: -8238564589118820840}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2133497842537186358}
+  - {fileID: -7563327205917567862}
   StringsBanks:
-  - {fileID: -2061296973123226268}
-  cacheTime: 638061394220564583
+  - {fileID: -2636712282086354678}
+  cacheTime: 638062361015788869
   cacheVersion: 131593
---- !u!114 &2133497842537186358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audios/FmodProject/GameEnvoirment/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638061394220524699
-  FileSizes:
-  - Name: Desktop
-    Value: 2422016
-  Exists: 1
 --- !u!114 &8465446880597884036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +109,7 @@ MonoBehaviour:
     Data3: 767977913
     Data4: 996245288
   Banks:
-  - {fileID: 2133497842537186358}
+  - {fileID: -7563327205917567862}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

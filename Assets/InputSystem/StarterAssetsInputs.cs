@@ -1,51 +1,85 @@
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
-#endif
 
 namespace StarterAssets
 {
-	public class StarterAssetsInputs : MonoBehaviour
-	{
-		[Header("Character Input Values")]
-		public Vector2 move;
-		public Vector2 look;
-		public bool jump;
-		public bool sprint;
+    public class StarterAssetsInputs : MonoBehaviour
+    {
+        [Header("Character Input Values")]
+        public Vector2 Move;
+        public Vector2 Look;
+        public bool Jump;
+        public bool Sprint;
 
-		[Header("Movement Settings")]
-		public bool analogMovement;
+        [Header("Movement Settings")]
+        public bool AnalogMovement;
 
-		[Header("Mouse Cursor Settings")]
-		public bool cursorLocked = true;
-		public bool cursorInputForLook = true;
+        [Header("Mouse Cursor Settings")] public bool CursorLocked = true;
+        public bool CursorInputForLook = true;
 
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+        public void OnMoveInput(InputAction.CallbackContext value)
+        {
+            Move = value.ReadValue<Vector2>();
+        }
+
+        public void OnLookInput(InputAction.CallbackContext value)
+        {
+            if (CursorInputForLook) 
+                Look = value.ReadValue<Vector2>();
+        }
+
+        public void OnJumpInput(InputAction.CallbackContext value)
+        {
+            Jump = value.ReadValueAsButton();
+        }
+
+        public void OnSprintInput(InputAction.CallbackContext value)
+        {
+            Sprint = value.ReadValueAsButton();
+        }
+
+        
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            SetCursorState(CursorLocked);
+        }
+
+        private void SetCursorState(bool newState)
+        {
+            Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+        }
+    }
+		public void MoveInput(Vector2 newMoveDirection)
 		{
-			MoveInput(value.Get<Vector2>());
+			move = newMoveDirection;
+		} 
+
+		public void LookInput(Vector2 newLookDirection)
+		{
+			look = newLookDirection;
 		}
 
-		public void OnLook(InputValue value)
+		public void JumpInput(bool newJumpState)
 		{
-			if(cursorInputForLook)
-			{
-				LookInput(value.Get<Vector2>());
-			}
+			jump = newJumpState;
 		}
 
-		public void OnJump(InputValue value)
+		public void SprintInput(bool newSprintState)
 		{
-			JumpInput(value.isPressed);
+			sprint = newSprintState;
+		}
+		
+		private void OnApplicationFocus(bool hasFocus)
+		{
+			SetCursorState(cursorLocked);
 		}
 
-		public void OnSprint(InputValue value)
+		private void SetCursorState(bool newState)
 		{
-			SprintInput(value.isPressed);
+			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-#endif
-
-
+	}
+	
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;

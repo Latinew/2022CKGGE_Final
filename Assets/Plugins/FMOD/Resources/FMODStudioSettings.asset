@@ -349,9 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
   HasSourceProject: 0
-  HasPlatforms: 1
+  HasPlatforms: 0
   sourceProjectPath: Assets/Audios/FmodProject/GameEnvoirment/GameEnvoirment.fspro
-  sourceBankPath: Assets/Audios/FmodProject/GameEnvoirment/Build
+  sourceBankPath: Assets/Audios/FMODBuild/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
