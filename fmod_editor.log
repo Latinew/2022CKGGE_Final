@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001A3D8C2BCD8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001DF5A3D42B8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,10 +18,279 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F75E28
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='539540__jvmyka-gmail-com__evil-laugh', format=5, channels=2, frequency=48000, lengthbytes=96992, lengthpcm=396431, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.108591.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F75E28
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='126113__klankbeeld__laugh', format=5, channels=2, frequency=48000, lengthbytes=84320, lengthpcm=334869, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.729004.
+[LOG] SystemI::createSound                     : filename = Assets/Audios/FMODBuild/Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000001DF48084D38 : node = 000001DE6DA403D0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001DF64FAFEC8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001DF48084D38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audios/FMODBuild/Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001DE6DA404E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='4. Wasteland', format=5, channels=2, frequency=48000, lengthbytes=1075424, lengthpcm=5376922, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999939.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001DF48084D38
+[LOG] SoundI::release                          : 4. Wasteland (000001DF48084D38)
+[LOG] SoundI::release                          :     4. Wasteland (000001DE6E545998)
+[LOG] SoundI::release                          :     4. Wasteland (000001DF48083598)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_10', format=5, channels=2, frequency=48000, lengthbytes=4128, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.062012.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_9', format=5, channels=2, frequency=48000, lengthbytes=4160, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.086365.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_2', format=5, channels=2, frequency=48000, lengthbytes=5088, lengthpcm=22382, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.117493.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_7', format=5, channels=2, frequency=48000, lengthbytes=2432, lengthpcm=12000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.061523.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_6', format=5, channels=2, frequency=48000, lengthbytes=4928, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044586.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_8', format=5, channels=2, frequency=48000, lengthbytes=2176, lengthpcm=12000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.053802.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 2_10', format=5, channels=2, frequency=48000, lengthbytes=6624, lengthpcm=30000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.069244.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_5', format=5, channels=2, frequency=48000, lengthbytes=3904, lengthpcm=19197, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076965.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 2_1', format=5, channels=2, frequency=48000, lengthbytes=4288, lengthpcm=18538, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.058502.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_4', format=5, channels=2, frequency=48000, lengthbytes=4192, lengthpcm=18785, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073334.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_3', format=5, channels=2, frequency=48000, lengthbytes=4320, lengthpcm=18000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.097626.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2411232
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 11072
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000040C84FF0E8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC85FA33C0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC85FA3380
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC85FA34A0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC85FA3560
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001DF64F74778
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='grass walking 1_1', format=5, channels=2, frequency=48000, lengthbytes=5760, lengthpcm=24000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.115906.
+[LOG] SoundI::release                          :  (000001DF655CFA28)
+[LOG] SoundI::release                          :     539540__jvmyka-gmail-com__evil-laugh (000001DE6E578478)
+[LOG] SoundI::release                          :  (000001DF655CE8E8)
+[LOG] SoundI::release                          :     126113__klankbeeld__laugh (000001DE6E576738)
+[LOG] SoundI::release                          :  (000001DF655D1CA8)
+[LOG] SoundI::release                          :     grass walking 1_1 (000001DE6D3D4F68)
+[LOG] SoundI::release                          :  (000001DF655D0718)
+[LOG] SoundI::release                          :     grass walking 1_10 (000001DE6E545998)
+[LOG] SoundI::release                          :  (000001DF655D0438)
+[LOG] SoundI::release                          :     grass walking 1_2 (000001DE6E546018)
+[LOG] SoundI::release                          :  (000001DF655D19C8)
+[LOG] SoundI::release                          :     grass walking 1_3 (000001DE6E572B18)
+[LOG] SoundI::release                          :  (000001DF655D0888)
+[LOG] SoundI::release                          :     grass walking 1_4 (000001DE6E5746B8)
+[LOG] SoundI::release                          :  (000001DF655D09F8)
+[LOG] SoundI::release                          :     grass walking 1_5 (000001DE6E55AED8)
+[LOG] SoundI::release                          :  (000001DF655D0B68)
+[LOG] SoundI::release                          :     grass walking 1_6 (000001DE6E550F98)
+[LOG] SoundI::release                          :  (000001DF655D1E18)
+[LOG] SoundI::release                          :     grass walking 1_8 (000001DE6E552658)
+[LOG] SoundI::release                          :  (000001DF655D20F8)
+[LOG] SoundI::release                          :     grass walking 1_7 (000001DE6E54F8D8)
+[LOG] SoundI::release                          :  (000001DF655D1B38)
+[LOG] SoundI::release                          :     grass walking 1_9 (000001DE6E5469D8)
+[LOG] SoundI::release                          :  (000001DF655D1298)
+[LOG] SoundI::release                          :     grass walking 2_1 (000001DE6E565158)
+[LOG] SoundI::release                          :  (000001DF655D1858)
+[LOG] SoundI::release                          :     grass walking 2_10 (000001DE6E55A1D8)
