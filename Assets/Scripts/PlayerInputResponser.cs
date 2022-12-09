@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
-using FMODUnityResonance;
-using FMOD;
-using FMODUnity;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerInputResponser: MonoBehaviour
@@ -18,23 +13,23 @@ public class PlayerInputResponser: MonoBehaviour
     [SerializeField, Space(20f)] private float Move_Amplitude;
     [SerializeField] private float Move_Frequency;
 
-    PlayerInput input;
+    private PlayerInput _input;
 
     private void Awake()
     {
-        input = GetComponent<PlayerInput>();
+        _input = GetComponent<PlayerInput>();
     }
 
     private void Start()
     {
-        input.actions.FindAction("Move").started += OnPlayerMove;
-        input.actions.FindAction("Move").canceled += OnPlayerStop;
+        _input.actions.FindAction("Move").started += OnPlayerMove;
+        _input.actions.FindAction("Move").canceled += OnPlayerStop;
     }
 
     private void OnDestroy()
     {
-        input.actions.FindAction("Move").started -= OnPlayerMove;
-        input.actions.FindAction("Move").canceled -= OnPlayerStop;
+        _input.actions.FindAction("Move").started -= OnPlayerMove;
+        _input.actions.FindAction("Move").canceled -= OnPlayerStop;
     }
 
     public void OnPlayerMove(InputAction.CallbackContext cont)
