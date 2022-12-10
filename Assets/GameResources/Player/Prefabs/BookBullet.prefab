@@ -142,3 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fccd35b193d8b144597bac85275dc64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Direction: {x: 0, y: 0, z: 1}
+  GFXTransform: {fileID: 2019487345503449682}
+  LifeTime: 2
+  MoveSpeed: 10
+  RotateSpeed: 1
