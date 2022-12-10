@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2019487345503449682}
   - component: {fileID: 2019487345503449683}
   - component: {fileID: 2019487345503449684}
-  - component: {fileID: 467777422}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019487345503449685}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &467777422
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019487345503449685}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 1, z: 1.0000004}
-  m_Center: {x: 0, y: -0.0000019073486, z: -0.00024414062}
 --- !u!1 &2019487346570822439
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,9 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2019487346570822438}
   - component: {fileID: 1579736158944210284}
+  - component: {fileID: 7911404235264943653}
   m_Layer: 0
   m_Name: BookBullet
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,5 +132,18 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 1}
   GFXTransform: {fileID: 2019487345503449682}
   LifeTime: 2
-  MoveSpeed: 10
+  MoveSpeed: 15
   RotateSpeed: 1
+--- !u!135 &7911404235264943653
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019487346570822439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15493354
+  m_Center: {x: 0, y: 0, z: 0}
