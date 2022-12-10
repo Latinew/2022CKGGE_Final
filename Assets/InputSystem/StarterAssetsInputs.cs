@@ -9,6 +9,7 @@ namespace StarterAssets
         public Vector2 Move;
         public Vector2 Look;
         public bool Jump;
+        public bool Attack;
         public bool Sprint;
 
         [Header("Movement Settings")]
@@ -24,7 +25,7 @@ namespace StarterAssets
 
         public void OnLookInput(InputAction.CallbackContext value)
         {
-            if (CursorInputForLook) 
+            if (CursorInputForLook)
                 Look = value.ReadValue<Vector2>();
         }
 
@@ -38,7 +39,11 @@ namespace StarterAssets
             Sprint = value.ReadValueAsButton();
         }
 
-        
+        public void OnAttackInput(InputAction.CallbackContext value)
+        {
+            Attack = value.ReadValueAsButton();
+        }
+
         private void OnApplicationFocus(bool hasFocus)
         {
             SetCursorState(CursorLocked);
@@ -49,66 +54,4 @@ namespace StarterAssets
             Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
         }
     }
-		public void MoveInput(Vector2 newMoveDirection)
-		{
-			move = newMoveDirection;
-		} 
-
-		public void LookInput(Vector2 newLookDirection)
-		{
-			look = newLookDirection;
-		}
-
-		public void JumpInput(bool newJumpState)
-		{
-			jump = newJumpState;
-		}
-
-		public void SprintInput(bool newSprintState)
-		{
-			sprint = newSprintState;
-		}
-		
-		private void OnApplicationFocus(bool hasFocus)
-		{
-			SetCursorState(cursorLocked);
-		}
-
-		private void SetCursorState(bool newState)
-		{
-			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-		}
-	}
-	
-		public void MoveInput(Vector2 newMoveDirection)
-		{
-			move = newMoveDirection;
-		} 
-
-		public void LookInput(Vector2 newLookDirection)
-		{
-			look = newLookDirection;
-		}
-
-		public void JumpInput(bool newJumpState)
-		{
-			jump = newJumpState;
-		}
-
-		public void SprintInput(bool newSprintState)
-		{
-			sprint = newSprintState;
-		}
-
-		private void OnApplicationFocus(bool hasFocus)
-		{
-			SetCursorState(cursorLocked);
-		}
-
-		private void SetCursorState(bool newState)
-		{
-			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-		}
-	}
-	
 }
