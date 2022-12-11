@@ -188,7 +188,7 @@ namespace StarterAssets
                 #region 날아갈 타겟 지점
 
                 //날아갈 끝 지점
-                Vector3 targetPoint = _mainCamera.transform.position + _mainCamera.transform.forward * 10;
+                Vector3 targetPoint = _mainCamera.transform.position + _mainCamera.transform.forward * 15;
 
                 //오른손의 책이 타겟으로 날가가기 위한 방향
                 Vector3 targetDirection = (targetPoint - BulletSpawnPoint.position).normalized;
