@@ -1,4 +1,5 @@
 using System;
+using Manager;
 using NaughtyAttributes;
 using StarterAssets;
 using UniRx;
@@ -19,7 +20,7 @@ public class Zombie : MonoBehaviour
     public float DestroyDelay = 1;
     public UnityEvent OnDead;
 
-    
+
     private static readonly int MoveID = Animator.StringToHash("Move");
     private static readonly int OnDeadID = Animator.StringToHash("OnDead");
 
@@ -41,6 +42,7 @@ public class Zombie : MonoBehaviour
             .Subscribe(_ =>
             {
                 OnDead?.Invoke();
+                AutoManager.Manager.Get<GameManager>().ZombieCount -= 1;
                 _animator.SetTrigger(OnDeadID);
                 _collider.enabled = false;
                 Destroy(gameObject, DestroyDelay);
