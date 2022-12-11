@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using NaughtyAttributes;
+using Player;
+using UniRx;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
 
@@ -7,6 +10,13 @@ namespace StarterAssets
     [RequireComponent(typeof(CharacterController))]
     public class FirstPersonController : MonoBehaviour
     {
+        public enum EPlayerState
+        {
+            None,
+            Nothing,
+            Throw
+        }
+
         [Header("Player")] [Tooltip("캐릭터의 이동 속도(ms)")]
         public float MoveSpeed = 4.0f;
 
@@ -43,6 +53,13 @@ namespace StarterAssets
         [Tooltip("카메라를 얼마나 위로 올릴 수 있습니까?")] public float TopClamp = 90.0f;
         [Tooltip("카메라를 얼마나 아래로 움직일 수 있습니까?")] public float BottomClamp = -90.0f;
 
+        [Tooltip("책을 던지고 나서 다시 보이게하는 딜레이")] public float BookShowDelay = 2;
+
+        [Header("책을 시작시 가지고 있는가?")]
+        public BoolReactiveProperty PlayOnAwakeHasBook = new();
+        
+        public EPlayerState PlayerState { get; set; }
+
         public Transform BulletSpawnPoint;
 
         // cinemachine
@@ -58,6 +75,7 @@ namespace StarterAssets
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
 
+        private PlayerAnimation _animation;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private PlayerInput _playerInput;
@@ -76,8 +94,9 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
             _controller = GetComponent<CharacterController>();
-            _input = GetComponent<StarterAssetsInputs>();
             _playerInput = GetComponent<PlayerInput>();
+            _animation = GetComponent<PlayerAnimation>();
+            _input = GetComponent<StarterAssetsInputs>();
         }
 
         private void Start()
@@ -85,6 +104,8 @@ namespace StarterAssets
             //시작 시 시간 제한 재설정
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            PlayerState = EPlayerState.Nothing;
         }
 
         private void Update()
@@ -176,35 +197,50 @@ namespace StarterAssets
                 inputDirection = transform.right * _input.Move.x + transform.forward * _input.Move.y;
             }
 
+            //플레이어의 이동 애니메이션 처리
+            _animation.SetMoveAnimation(_speed);
+
             // move the player
             _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }
-        
+
         private void Attack()
         {
+            if (PlayOnAwakeHasBook.Value != true) return;
+            if (PlayerState != EPlayerState.Nothing) return;
+            
             if (_input.Attack)
             {
-                #region 날아갈 타겟 지점
-
-                //날아갈 끝 지점
-                Vector3 targetPoint = _mainCamera.transform.position + _mainCamera.transform.forward * 15;
-
-                //오른손의 책이 타겟으로 날가가기 위한 방향
-                Vector3 targetDirection = (targetPoint - BulletSpawnPoint.position).normalized;
-
-                #endregion
-
-                #region 생성
-
-                GameObject bullet = _container.ResolveId<GameObject>("Bullet");
-                var bookBullet = Instantiate(bullet, BulletSpawnPoint.position,Quaternion.identity).GetComponent<BookBullet>();
-                bookBullet.Direction = targetDirection;
-
-                #endregion
-
+                _animation.OnTriggerAttack();
+                PlayerState = EPlayerState.Throw;
                 _input.Attack = false;
             }
+        }
+
+        /// <summary>
+        /// 책을 던집니다.
+        /// </summary>
+        public void ShotBook()
+        {
+            #region 날아갈 타겟 지점
+
+            //날아갈 끝 지점
+            Vector3 targetPoint = _mainCamera.transform.position + _mainCamera.transform.forward * 15;
+
+            //오른손의 책이 타겟으로 날가가기 위한 방향
+            Vector3 targetDirection = (targetPoint - BulletSpawnPoint.position).normalized;
+
+            #endregion
+
+            #region 생성
+
+            GameObject bullet = _container.ResolveId<GameObject>("Bullet");
+            var bookBullet = Instantiate(bullet, BulletSpawnPoint.position, Quaternion.identity)
+                .GetComponent<BookBullet>();
+            bookBullet.Direction = targetDirection;
+
+            #endregion
         }
 
         private void JumpAndGravity()
@@ -274,6 +310,12 @@ namespace StarterAssets
             Gizmos.DrawSphere(
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
                 GroundedRadius);
+        }
+
+        [Button("Get Book")]
+        private void TestHasBook()
+        {
+            PlayOnAwakeHasBook.Value = true;
         }
     }
 }
