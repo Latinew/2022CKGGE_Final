@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 05db667749fd79541b026bff39d94a66
+guid: f265326940cd54840ba956d8e357c5a7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,8 +50,8 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 2
-  alphaIsTransparency: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
@@ -61,9 +61,9 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 1
-  applyGammaDecoding: 1
-  cookieLightType: 1
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
