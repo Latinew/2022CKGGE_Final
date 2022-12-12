@@ -18,12 +18,13 @@ public class BookBullet : MonoBehaviour
     
     private void Start()
     {
+        transform.rotation = Quaternion.LookRotation(Direction);
         Destroy(gameObject, LifeTime);
     }
 
     private void Update()
     {
-        transform.Translate(Direction * (MoveSpeed * Time.deltaTime));
-        GFXTransform.Rotate(Vector3.forward * (RotateSpeed * 100 * Time.deltaTime));
+        transform.Translate(Vector3.forward * (MoveSpeed * Time.deltaTime));
+        GFXTransform.Rotate(-Vector3.left * (RotateSpeed * 100 * Time.deltaTime));
     }
 }
