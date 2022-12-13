@@ -49,7 +49,7 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 1}
   GFXTransform: {fileID: 6741086047019105037}
   LifeTime: 15
-  MoveSpeed: 13
+  MoveSpeed: 20
   RotateSpeed: 1
 --- !u!135 &7911404235264943653
 SphereCollider:
