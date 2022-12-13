@@ -1,6 +1,7 @@
 ﻿using NaughtyAttributes;
 using Player;
 using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -55,9 +56,8 @@ namespace StarterAssets
 
         [Tooltip("책을 던지고 나서 다시 보이게하는 딜레이")] public float BookShowDelay = 2;
 
-        [Header("책을 시작시 가지고 있는가?")]
-        public BoolReactiveProperty PlayOnAwakeHasBook = new();
-        
+        [Header("책을 시작시 가지고 있는가?")] public BoolReactiveProperty PlayOnAwakeHasBook = new();
+
         public EPlayerState PlayerState { get; set; }
 
         public Transform BulletSpawnPoint;
@@ -106,6 +106,14 @@ namespace StarterAssets
             _fallTimeoutDelta = FallTimeout;
 
             PlayerState = EPlayerState.Nothing;
+
+#if UNITY_EDITOR
+            //F1을 누르면 책을 얻을 수 있다.
+            this.UpdateAsObservable()
+                .Where(_ => Keyboard.current.f1Key.wasPressedThisFrame)
+                .Subscribe(_ => TestHasBook())
+                .AddTo(this);
+#endif
         }
 
         private void Update()
@@ -209,7 +217,7 @@ namespace StarterAssets
         {
             if (PlayOnAwakeHasBook.Value != true) return;
             if (PlayerState != EPlayerState.Nothing) return;
-            
+
             if (_input.Attack)
             {
                 _animation.OnTriggerAttack();
