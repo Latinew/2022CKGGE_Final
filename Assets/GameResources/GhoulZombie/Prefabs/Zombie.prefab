@@ -43,13 +43,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2673042395743925763}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dfb77664f3e87674abe97728edcaf6cb, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.39126587
-  m_Height: 2.3432302
+  m_Radius: 0.56066275
+  m_Height: 3.1931813
   m_Direction: 1
-  m_Center: {x: 0.031982422, y: 1.2804282, z: 0}
+  m_Center: {x: 0.031982422, y: 1.7054037, z: 0}
 --- !u!114 &6790932672923598053
 MonoBehaviour:
   m_ObjectHideFlags: 0

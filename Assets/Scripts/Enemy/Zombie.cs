@@ -7,6 +7,7 @@ using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Zenject;
 
 public class Zombie : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Zombie : MonoBehaviour
     public float DestroyDelay = 1;
     public UnityEvent OnDead;
 
+    [Inject(Id = "Bomb")] private GameObject _bombEffect;
 
     private static readonly int MoveID = Animator.StringToHash("Move");
     private static readonly int OnDeadID = Animator.StringToHash("OnDead");
@@ -45,6 +47,11 @@ public class Zombie : MonoBehaviour
                 AutoManager.Manager.Get<GameManager>().ZombieCount -= 1;
                 _animator.SetTrigger(OnDeadID);
                 _collider.enabled = false;
+
+                Vector3 position = transform.position;
+                position.y += 1.58f;
+                Instantiate(_bombEffect, position, Quaternion.identity);
+
                 Destroy(gameObject, DestroyDelay);
             }).AddTo(this);
 
@@ -65,6 +72,9 @@ public class Zombie : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Shootable"))
+        {
             HP.Value -= 1;
+            Destroy(other.gameObject);
+        }
     }
 }

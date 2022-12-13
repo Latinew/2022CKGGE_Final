@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BookBullet: {fileID: 2019487346570822439, guid: ef50f202382e52c449530080b78c3c08,
     type: 3}
+  Bomb: {fileID: 716877121845746396, guid: 124f2e9aba1499d479894c8d38635dda, type: 3}
 --- !u!1 &6842155624114204518
 GameObject:
   m_ObjectHideFlags: 0
