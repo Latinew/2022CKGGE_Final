@@ -19161,7 +19161,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049331608}
-  m_LocalRotation: {x: 0.1004508, y: -0.45352727, z: 0.051531605, w: 0.8840629}
+  m_LocalRotation: {x: 0.096562415, y: -0.51480454, z: 0.058494173, w: 0.8498415}
   m_LocalPosition: {x: 195.38155, y: -47.360054, z: 159.0362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20932,6 +20932,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1485908629, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485908630, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485908630, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1485908630, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1581355359, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -21007,6 +21023,26 @@ PrefabInstance:
     - target: {fileID: 2111133846, guid: 61a871d904c2be6469010be89c6dc3c4, type: 3}
       propertyPath: m_enableWordWrapping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 709531303399901226, guid: 61a871d904c2be6469010be89c6dc3c4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 709531303399901227, guid: 61a871d904c2be6469010be89c6dc3c4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 709531303399901227, guid: 61a871d904c2be6469010be89c6dc3c4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 709531303399901227, guid: 61a871d904c2be6469010be89c6dc3c4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 709531303451036346, guid: 61a871d904c2be6469010be89c6dc3c4,
         type: 3}
