@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audios/FMODBuild/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638062361015788869
+  lastModified: 638066208262115075
   FileSizes: []
   Exists: 1
 --- !u!114 &-2636712282086354678
@@ -60,11 +60,38 @@ MonoBehaviour:
   Path: Assets/Audios/FMODBuild/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638062361015687638
+  lastModified: 638066208262165068
   FileSizes:
   - Name: 
-    Value: 878
+    Value: 990
   Exists: 1
+--- !u!114 &-2413305269480464278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  Guid:
+    Data1: -367183198
+    Data2: 1083853629
+    Data3: 481329285
+    Data4: 1831227586
+  Banks:
+  - {fileID: -7563327205917567862}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 19043
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,13 +110,98 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 8465446880597884036}
   - {fileID: -8238564589118820840}
+  - {fileID: 4208509931672152221}
+  - {fileID: 3412924609541558727}
+  - {fileID: -2413305269480464278}
+  - {fileID: 4612259498844336535}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7563327205917567862}
   StringsBanks:
   - {fileID: -2636712282086354678}
-  cacheTime: 638062361015788869
+  cacheTime: 638066208262165068
   cacheVersion: 131593
+--- !u!114 &3412924609541558727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bonfire
+  m_EditorClassIdentifier: 
+  Path: event:/Bonfire
+  Guid:
+    Data1: -1243338902
+    Data2: 1299809999
+    Data3: 231985853
+    Data4: 208120956
+  Banks:
+  - {fileID: -7563327205917567862}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 87507
+--- !u!114 &4208509931672152221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Book_Shot
+  m_EditorClassIdentifier: 
+  Path: event:/Book_Shot
+  Guid:
+    Data1: -270853879
+    Data2: 1254384565
+    Data3: 120817541
+    Data4: 129002509
+  Banks:
+  - {fileID: -7563327205917567862}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3553
+--- !u!114 &4612259498844336535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Book_Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Book_Hit
+  Guid:
+    Data1: -1166476043
+    Data2: 1150609081
+    Data3: 1997665411
+    Data4: 504144800
+  Banks:
+  - {fileID: -7563327205917567862}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &8465446880597884036
 MonoBehaviour:
   m_ObjectHideFlags: 0
