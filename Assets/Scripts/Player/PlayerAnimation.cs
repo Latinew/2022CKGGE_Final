@@ -26,21 +26,29 @@ namespace Player
         {
             _stateMachineTrigger = PlayerAnimator.GetBehaviour<ObservableStateMachineTrigger>();
 
-            _stateMachineTrigger.OnStateEnterAsObservable()
-                .Where(info => info.StateInfo.IsName("attack03"))
-                .Subscribe(_ =>
-                {
-                    _firstPersonController.ShotBook();
-                    Book.OnTriggerHideWithoutAnimation();
+            //_stateMachineTrigger.OnStateEnterAsObservable()
+            //    .Where(info => info.StateInfo.IsName("attack03"))
+            //    .Subscribe(_ =>
+            //    {
+            //        print("애니메이션 3번 시작");
 
-                    StartCoroutine(ShowBookTask());
-                })
-                .AddTo(this);
+
+            //    })
+            //    .AddTo(this);
 
             _firstPersonController.PlayOnAwakeHasBook
                 .Where(value => value)
                 .Subscribe(_ => Book.OnTriggerShowWithoutAnimation())
                 .AddTo(this);
+        }
+
+        public void PlayShotBook()
+        {
+            print("던진다");
+            _firstPersonController.ShotBook();
+            Book.OnTriggerHideWithoutAnimation();
+
+            StartCoroutine(ShowBookTask());
         }
 
         private IEnumerator ShowBookTask()

@@ -157,7 +157,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     Overlay:
-      Value: 1
+      Value: 0
       HasValue: 1
     Logging:
       Value: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131601
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131601
   Platforms:
   - {fileID: -6795654766776041486}

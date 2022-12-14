@@ -99,21 +99,13 @@ namespace StarterAssets
             _input = GetComponent<StarterAssetsInputs>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
             //시작 시 시간 제한 재설정
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
 
             PlayerState = EPlayerState.Nothing;
-
-#if UNITY_EDITOR
-            //F1을 누르면 책을 얻을 수 있다.
-            this.UpdateAsObservable()
-                .Where(_ => Keyboard.current.f1Key.wasPressedThisFrame)
-                .Subscribe(_ => TestHasBook())
-                .AddTo(this);
-#endif
         }
 
         private void Update()
@@ -122,6 +114,20 @@ namespace StarterAssets
             GroundedCheck();
             Move();
             Attack();
+            ResetState();
+
+#if UNITY_EDITOR
+            if (Keyboard.current.f1Key.wasPressedThisFrame)
+                GetHasBook();
+#endif
+        }
+
+        private void ResetState()
+        {
+            if (Keyboard.current.tabKey.wasPressedThisFrame) {
+                PlayerState = EPlayerState.Nothing;
+            }
+            
         }
 
         private void LateUpdate()
@@ -215,13 +221,21 @@ namespace StarterAssets
 
         private void Attack()
         {
-            if (PlayOnAwakeHasBook.Value != true) return;
+            //if (PlayOnAwakeHasBook.Value != true) return;
+
+            //일반 상태가 아니라면 return한다.
             if (PlayerState != EPlayerState.Nothing) return;
 
+            //공격 키 입력이 들어왔다면,
             if (_input.Attack)
             {
+                //애니메이션 재생
                 _animation.OnTriggerAttack();
+
+                //던지기 상태로 변경
                 PlayerState = EPlayerState.Throw;
+
+                //키 입력 초기화
                 _input.Attack = false;
             }
         }
@@ -242,6 +256,8 @@ namespace StarterAssets
             #endregion
 
             #region 생성
+
+            print("던질까 말까");
 
             GameObject bullet = _container.ResolveId<GameObject>("Bullet");
             var bookBullet = Instantiate(bullet, BulletSpawnPoint.position, Quaternion.identity)
@@ -321,7 +337,7 @@ namespace StarterAssets
         }
 
         [Button("Get Book")]
-        private void TestHasBook()
+        public void GetHasBook()
         {
             PlayOnAwakeHasBook.Value = true;
         }
