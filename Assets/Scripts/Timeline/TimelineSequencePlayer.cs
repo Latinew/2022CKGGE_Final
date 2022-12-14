@@ -34,9 +34,10 @@ public class TimelineSequencePlayer : MonoBehaviour
         TimelineObjects[currentPlaying].stopped -= PlayNextTimeline;
         TimelineObjects[currentPlaying].gameObject.SetActive(false);
 
-        currentPlaying++;
+        currentPlaying+=1;
         if (currentPlaying >= TimelineObjects.Length)
         {
+            Debug.Log("ppap");
             OnSequenceEnd.Invoke();
             IsPlayingSequence = false;
             return;
